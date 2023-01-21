@@ -70,7 +70,7 @@ GLOBAL_PERSON GP
   AND
     i.year=f.year
 );
-CREATE VIEW [GROUP] AS
-SELECT CustomerName, ContactName
-FROM Customers
-WHERE Country = "Brazil";
+CREATE VIEW GROUP_EXAMPLE AS(
+ SELECT G.name as Group_name FROM GROUP G WHERE G.GROUP_ID=,
+ SELECT M.Message as Message FROM MESSAGES M WHERE MESSAGE_Reciever_ID=G.GROUP_ID,
+ SELECT GP.name as Sender_name FROM GLOBAL_PERSON GP WHERE M.Message_Sender_ID=GP.PERSON_ID)
